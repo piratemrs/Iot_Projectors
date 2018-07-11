@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/round_button"
+            android:onClick="pwr"
+            android:text="PWR"
+            android:textColor="#FFF" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/round_button_yellow"
+            android:onClick="freeze"
+            android:text="Freeze"
+            android:textColor="#FFF" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <abak.tr.com.boxedverticalseekbar.BoxedVertical
+            android:id="@+id/boxed_vertical"
+            android:layout_width="40dp"
+            android:layout_height="250dp"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight="2"
+            app:backgroundColor="@color/color_background"
+            app:cornerRadius="45"
+            app:defaultValue="23"
+            app:imageEnabled="false"
+            app:max="63"
+            app:progressColor="@color/color_progress"
+            app:step="5"
+            app:textBottomPadding="20"
+            app:textColor="@color/color_background"
+            app:textEnabled="true"
+            app:textSize="12sp"
+            app:touchDisabled="true" />
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_below="@id/boxed_vertical"
+            android:layout_marginLeft="36dp"
+            android:src="@drawable/sun" />
+
+        <com.fangxu.allangleexpandablebutton.AllAngleExpandableButton
+            android:id="@+id/button_expandable_0_360"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="5dp"
+
+            app:aebAnimDurationMillis="175"
+            app:aebButtonElevation="6dp"
+            app:aebButtonGapDp="40dp"
+            app:aebEndAngleDegree="360"
+            app:aebIsSelectionMode="false"
+            app:aebMainButtonRotateAnimDurationMillis="300"
+            app:aebMainButtonRotateDegree="360"
+            app:aebMainButtonSizeDp="50dp"
+            app:aebRippleEffect="true"
+            app:aebStartAngleDegree="0"
+            app:aebSubButtonSizeDp="50dp" />
+
+
+        <abak.tr.com.boxedverticalseekbar.BoxedVertical
+            android:id="@+id/boxed_vertical2"
+            android:layout_width="40dp"
+            android:layout_height="250dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="36dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight="2"
+            app:backgroundColor="@color/color_background"
+            app:cornerRadius="45"
+            app:defaultValue="50"
+            app:imageEnabled="false"
+            app:max="100"
+            app:progressColor="@color/color_progress"
+            app:step="5"
+            app:textBottomPadding="20"
+            app:textColor="@color/color_background"
+            app:textEnabled="true"
+            app:textSize="12sp"
+            app:touchDisabled="true" />
+        <ImageButton
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/unmute"
+            android:layout_below="@id/boxed_vertical2"
+            android:layout_marginRight="36dp"
+            android:layout_alignParentRight="true"
+            android:onClick="mute"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OPTICAL Module Temp: 21c / F"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Air Output Temp: 21c / F"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Air Input Temp: 21c / F"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="48dp"
+            android:layout_marginRight="18dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.fangxu.allangleexpandablebutton.AllAngleExpandableButton
+                android:id="@+id/button_expandable_90_180"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+
+                app:aebAnimDurationMillis="175"
+                app:aebButtonElevation="6dp"
+                app:aebButtonGapDp="40dp"
+                app:aebEndAngleDegree="180"
+                app:aebIsSelectionMode="false"
+                app:aebMainButtonRotateAnimDurationMillis="300"
+                app:aebMainButtonRotateDegree="-135"
+                app:aebMainButtonSizeDp="50dp"
+                app:aebRippleEffect="true"
+                app:aebStartAngleDegree="90"
+                app:aebSubButtonSizeDp="45dp" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference android:key="pref_Projector"
+                        android:title="Projector ID"
+                        android:summary="Enter Room/Projector Name"/>
+    <EditTextPreference android:key="pref_IP"
+        android:title="Projector IP "
+        android:summary="ex: 192.168.1.20"/>
+</PreferenceScreen>
